@@ -12,6 +12,11 @@ const HeroIcon = () => {
   return (
     <div>
         <Row>
+            <Col>
+            <h4 className='text-center'>You may be looking for</h4>
+            </Col>
+        </Row>
+        <Row>
           <Col>
             <div className="card">
               <figure>

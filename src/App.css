@@ -93,9 +93,7 @@ select{
   font-size: 56px;
   font-weight: 700;
 }
-.hero-form{
-  padding: 40px 0;
-}
+
 .landing-form {
   display: flex;
   justify-content: center;
@@ -130,6 +128,34 @@ select{
 }
 .card figure img{
   width: 100%;
+}
+.hero-form .container{
+  position: relative;
+}
+.hero-form-data{
+  width: 100%;
+  transform: translate(-50%);
+  left: 50%;
+  bottom: -56px;
+  position: absolute;
+  padding: 50px;
+  box-shadow: 5px 5px 10px #0087e614;
+  background-color: #fff;
+  border-radius: 15px;
+}
+.swiper-section{
+  padding: 100px 0 0 40px;
+}
+.hero-banner {
+  background: linear-gradient(90deg, #E7F0FF,#E8F1FF78);
+  padding-bottom: 285px;
+}
+.text-center{
+  text-align: center;
+}
+
+.hero-section-wrap{
+  position: relative;
 }
 .card.active {
   border: 1px solid #2aa7ff;

@@ -13,30 +13,38 @@ const Heroform = () => {
   const [statelist, setStatelist] = useState([]);
   const [selectstate, setSelectState] = useState("");
   const [citylist, setCitylist] = useState([]);
-  const [selectCity,setSelectCity] =  useState("");
+  const [selectCity, setSelectCity] = useState("");
   const navigate = useNavigate();
 
-  const {stateVal,cityVal,setStateVal,setCityVal,centerData,setCenterData} = useContext(AppContext);
+  const {
+    stateVal,
+    cityVal,
+    setStateVal,
+    setCityVal,
+    centerData,
+    setCenterData,
+  } = useContext(AppContext);
   const hospitalRoute = (e) => {
     e.preventDefault();
-    navigate('/hospitals');
-    const centerList = async () =>{
-      try{
-        const centerlistData = await axios.get(`https://meddata-backend.onrender.com/data?state=${selectstate}&city=${selectCity}`);
+    navigate("/hospitals");
+    const centerList = async () => {
+      try {
+        const centerlistData = await axios.get(
+          `https://meddata-backend.onrender.com/data?state=${selectstate}&city=${selectCity}`
+        );
         console.log(centerlistData.data);
         setStateVal(selectstate);
         setCenterData(centerlistData.data);
-      }catch(error){
-        console.error("Error fetching Centers:" , error)
+      } catch (error) {
+        console.error("Error fetching Centers:", error);
       }
-    }
+    };
 
     centerList();
-   
   };
   useEffect(() => {
-    const tempState= JSON.parse(localStorage.getItem('statename')) || "";
-    const tempList = JSON.parse(localStorage.getItem('centerList')) || [];
+    const tempState = JSON.parse(localStorage.getItem("statename")) || "";
+    const tempList = JSON.parse(localStorage.getItem("centerList")) || [];
     setCenterData(tempList);
     setStateVal(tempState);
   }, []);
@@ -72,47 +80,50 @@ const Heroform = () => {
     }
   }, [selectstate, statelist]);
 
-   const cityValList = () =>{}
+  const cityValList = () => {};
 
   return (
     <div className="hero-form">
       <Container>
-        <Row>
-          <Col>
-            <form className="landing-form">
-              <div className="search-field">
-                <CiSearch />
-                <select
-                  value={selectstate}
-                  onChange={(e) => {
-                    setSelectState(e.target.value);
-                  }}
-                >
-                  <option>State</option>
-                  {statelist.map((val, index) => (
-                    <option key={index}>{val}</option>
-                  ))}
-                </select>
-              </div>
-              <div className="search-field">
-                <CiSearch />
-                <select value={selectCity} onChange={(e)=> setSelectCity(e.target.value)}
+        <div className="hero-form-data">
+          <Row>
+            <Col>
+              <form className="landing-form">
+                <div className="search-field">
+                  <CiSearch />
+                  <select
+                    value={selectstate}
+                    onChange={(e) => {
+                      setSelectState(e.target.value);
+                    }}
                   >
-                  <option>City</option>
-                  {citylist.map((val, index) => (
-                    <option key={index}>{val}</option>
-                  ))}
-                </select>
-              </div>
-              <button className="main-button" onClick={hospitalRoute}>
-                <CiSearch />
-                Search
-              </button>
-            </form>
-          </Col>
-        </Row>
-        <HeroIcon/>
-        
+                    <option>State</option>
+                    {statelist.map((val, index) => (
+                      <option key={index}>{val}</option>
+                    ))}
+                  </select>
+                </div>
+                <div className="search-field">
+                  <CiSearch />
+                  <select
+                    value={selectCity}
+                    onChange={(e) => setSelectCity(e.target.value)}
+                  >
+                    <option>City</option>
+                    {citylist.map((val, index) => (
+                      <option key={index}>{val}</option>
+                    ))}
+                  </select>
+                </div>
+                <button className="main-button" onClick={hospitalRoute}>
+                  <CiSearch />
+                  Search
+                </button>
+              </form>
+            </Col>
+          </Row>
+          <HeroIcon />
+        </div>
       </Container>
     </div>
   );
