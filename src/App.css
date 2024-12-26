@@ -1,0 +1,366 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.App {
+  font-family: "Poppins", serif;
+}
+/* img {
+  width: 100%;
+} */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.logo {
+  width: 92px;
+  margin-bottom: 0;
+}
+select{
+  width: 192px;
+}
+.top-navbar {
+  padding: 10px 0;
+  background-color: #2aa7ff;
+}
+
+.main-button {
+  padding: 10px 15px;
+  border-radius: 8px;
+  background-color: #2aa7ff;
+  color: #fff;
+  border: 0;
+}
+.main-nav {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-nav ul {
+  margin-bottom: 0;
+}
+.main-nav li {
+  list-style: none;
+  font-size: 14px;
+  font-weight: 400;
+  margin-right: 40px;
+}
+.top-navbar p {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.sub-head {
+  font-size: 30px;
+  line-height: 68px;
+}
+.main-head span {
+  color: #2aa7ff;
+}
+.main-head {
+  font-size: 56px;
+  font-weight: 700;
+}
+.hero-form{
+  padding: 40px 0;
+}
+.landing-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.search-field {
+  position: relative;
+  margin: 0 20px;
+}
+.search-field svg {
+  left: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.search-field select {
+
+  padding: 10px;
+  padding-left: 30px;
+  border-radius: 10px;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 8px;
+}
+.card figure {
+  width: 60px;
+}
+.card figure img{
+  width: 100%;
+}
+.card.active {
+  border: 1px solid #2aa7ff;
+  background-color: #2aa7ff14;
+}
+.card.active h4 {
+  color: #2aa7ff;
+}
+.card h4 {
+  color: #abb6c7;
+  font-size: 18px;
+  align-items: center;
+}
+
+.each-center{
+  display: flex;
+  align-items:start;
+}
+
+.medical-data{
+  padding: 20px 30px;
+}
+
+.headerText {
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  padding-top: 100px;
+}
+.centerListWrap {
+  background-image: linear-gradient(81deg,#e7f0ff 9.01%,#e8f1ff78 89.11%);
+}
+.notify {
+  color: #787887;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.medicalCard {
+  border-radius: 15px !important;
+  margin-bottom: 20px;
+  min-height: 269px;
+  padding: 50px 35px 12px;
+}
+.headerBar {
+  background: linear-gradient(91.75deg,#2aa7ff 1.4%,#0c8ce6 100.57%);
+  border-radius: 0 0 16px 16px;
+  height: 110px;
+}
+.hName {
+  color: #14bef0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  text-align: left;
+}
+.likes {
+  background: #00a500;
+  border-radius: 3.5px;
+  color: #fff;
+  gap: 2.79px;
+  height: 22.5px;
+  width: 44.08px;
+}
+.bookBtn {
+  background: #2aa7ff;
+  border: 1px solid #14bef0;
+  border-radius: 4px;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  padding: 9.62px 28.55px 9.38px 29.45px;
+  text-align: center;
+  width: 212px;
+}
+.available {
+  color: #01a400;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19.6px;
+  text-align: center;
+}
+.divider {
+  background-color: #00a500;
+  border-radius: 3.5px;
+  height: 5px;
+  left: 368px;
+  padding: 4.5px 7.49px 4px 10.8px;
+  position: absolute;
+  top: 0;
+  width: 44.08px;
+}
+.slotBooking {
+  padding: 20px 20px;
+  width: 100%;
+  margin-top: 18px;
+  position: relative;
+}
+.slideBtn {
+  
+  position: absolute;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 40px;   
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: 1px solid #e0e0e4;
+  border-radius: 50%;
+  bottom: 15px;
+  
+  transition: background-color 0.2s;
+  top: 50%;
+}
+
+
+.leftBtn {
+  left: 0;
+  
+}
+.rightBtn {
+  right: 0;
+}
+
+.swiper-slide {
+  padding: 1rem;
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.swiper-slide:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-slide a {
+  text-decoration: none;
+  color: #333;
+}
+
+.swiper-slide:hover a {
+  text-decoration: underline;
+  color: #2AA7FF;
+}
+
+.slotText {
+  color: #01a400;
+  font-family: Lato;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16.8px;
+  text-align: left;
+}
+.tab {
+  border-bottom: 4px solid #ffffff;
+}
+.tab:hover {
+  border-bottom: 4px solid #2aa7ff;
+  cursor: pointer;
+}
+
+.time {
+  border: 1px solid #2aa7ff;
+  border-radius: 3px;
+  color: #2aa7ff;
+  cursor: pointer;
+  height: 31.59px;
+  padding: 2px 2px 2px 12px;
+  margin: 5px;
+  width: 100%;
+}
+.time:hover {
+  
+  background-color: #2aa7ff;
+  color: white;
+}
+
+.dateBox {
+  border: 1px solid #00a500;
+  border-radius: 3px;
+  color: #007100;
+  font-weight: 700;
+  height: 32px;
+  left: 623.55px;
+  padding: 7px 6.55px 8px 11.45px;
+  font-family: Lato;
+  font-size: 14px;
+  gap: 0;
+  line-height: 19.6px;
+  text-align: center;
+  top: 63px;
+}
+
+.timeBox {
+  border: 1px solid #2aa7ff;
+  border-radius: 3px;
+  color: #2aa7ff;
+  font-weight: 400;
+  height: 31.59px;
+  left: 525.55px;
+  padding: 7px 10.96px 7.59px 11.44px;
+  line-height: 19.6px;
+}
+.footer-1 {
+  background-image: linear-gradient(81deg,#e7f0ff 9.01%,#e8f1ff78 89.11%);
+
+}
+.footer-2 {
+  background: #1b3c74;
+  padding: 78px 135px 30px 162px;
+}
+.socialLogo {
+  align-items: end;
+  display: flex;
+  gap: 12px;
+  height: 162px;
+}
+
+.paraFooter {
+  color: #fff;
+  margin-top: 100px;
+}
+.footer-cont {
+  background: #1b3c74;
+}
